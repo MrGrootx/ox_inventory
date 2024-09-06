@@ -113,6 +113,18 @@ return {
 		close = false,
 		consume = 0
 	},
+	['repairkit'] = {
+		label = 'Repair kit',
+		weight = 200,
+		stack = false,
+		close = false,
+	},
+	['cleaningkit'] = {
+		label = 'Cleaning kit',
+		weight = 200,
+		stack = false,
+		close = false,
+	},
 
 	['identification'] = {
 		label = 'Identification',
@@ -222,4 +234,232 @@ return {
 		label = 'Scrap Metal',
 		weight = 80,
 	},
+
+	["alive_chicken"] = {
+		label = "Living chicken",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+
+	["blowpipe"] = {
+		label = "Blowtorch",
+		weight = 2,
+		stack = true,
+		close = true,
+	},
+
+	["bread"] = {
+		label = "Bread",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+
+	["cannabis"] = {
+		label = "Cannabis",
+		weight = 3,
+		stack = true,
+		close = true,
+	},
+
+	["carokit"] = {
+		label = "Body Kit",
+		weight = 3,
+		stack = true,
+		close = true,
+	},
+
+	["carotool"] = {
+		label = "Tools",
+		weight = 2,
+		stack = true,
+		close = true,
+	},
+
+	["clothe"] = {
+		label = "Cloth",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+
+	["copper"] = {
+		label = "Copper",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+
+	["cutted_wood"] = {
+		label = "Cut wood",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+
+	["diamond"] = {
+		label = "Diamond",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+
+	["essence"] = {
+		label = "Gas",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+
+	["fabric"] = {
+		label = "Fabric",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+
+	["fish"] = {
+		label = "Fish",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+
+	["fixkit"] = {
+		label = "Repair Kit",
+		weight = 3,
+		stack = true,
+		close = true,
+	},
+
+	["fixtool"] = {
+		label = "Repair Tools",
+		weight = 2,
+		stack = true,
+		close = true,
+	},
+
+	["gazbottle"] = {
+		label = "Gas Bottle",
+		weight = 2,
+		stack = true,
+		close = true,
+	},
+
+	["gold"] = {
+		label = "Gold",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+
+	["iron"] = {
+		label = "Iron",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+
+	["marijuana"] = {
+		label = "Marijuana",
+		weight = 2,
+		stack = true,
+		close = true,
+	},
+
+	["medikit"] = {
+		label = "Medikit",
+		weight = 2,
+		stack = true,
+		close = true,
+	},
+
+	["packaged_chicken"] = {
+		label = "Chicken fillet",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+
+	["packaged_plank"] = {
+		label = "Packaged wood",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+
+	["petrol"] = {
+		label = "Oil",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+
+	["petrol_raffin"] = {
+		label = "Processed oil",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+
+	["slaughtered_chicken"] = {
+		label = "Slaughtered chicken",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+
+	["stone"] = {
+		label = "Stone",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+
+	["washed_stone"] = {
+		label = "Washed stone",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+
+	["wood"] = {
+		label = "Wood",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+
+	["wool"] = {
+		label = "Wool",
+		weight = 1,
+		stack = true,
+		close = true,
+	},
+	-- Groot Development custom
+	["starter_pack"] = {
+		label = "Starter Pack",
+		weight = 3,
+		stack = true,
+		close = false,
+		description = "Starter Pack",
+		client = {
+			image = "starter_pack.png",
+		}
+	},
+	["g_giftcard"] = {
+		label = "Gift Card",
+		weight = 100,
+		stack = false,
+		close = true,
+		description = "Gift Card",
+	},
+	["veh_mangement_tablet"] = {
+		label = "Veh Management Tablet",
+		weight = 100,
+		stack = false,
+		close = true,
+		description = "A tablet for managing jobs vehicles.",
+	}
 }

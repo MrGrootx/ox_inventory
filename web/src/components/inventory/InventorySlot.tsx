@@ -132,7 +132,7 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
             : undefined,
         opacity: isDragging ? 0.4 : 1.0,
         backgroundImage: `url(${item?.name ? getItemUrl(item as SlotWithItem) : 'none'}`,
-        border: isOver ? '1px dashed rgba(255,255,255,0.4)' : '',
+        border: isOver ? '1px dashed rgba(93,129,133,0.5)' : '',
       }}
     >
       {isSlotWithItem(item) && (
@@ -153,12 +153,16 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
         >
           <div
             className={
-              inventoryType === 'player' && item.slot <= 5 ? 'item-hotslot-header-wrapper' : 'item-slot-header-wrapper'
+              inventoryType === 'player' && item.slot <= 8 ? 'item-hotslot-header-wrapper' : 'item-slot-header-wrapper'
             }
           >
-            {inventoryType === 'player' && item.slot <= 5 && <div className="inventory-slot-number">{item.slot}</div>}
+            {inventoryType === 'player' && item.slot <= 8 && <div className="inventory-slot-number">{item.slot}</div>}
             <div className="item-slot-info-wrapper">
-              <p>
+              <p
+                style={{
+                  fontSize: '10px',
+                }}
+              >
                 {item.weight > 0
                   ? item.weight >= 1000
                     ? `${(item.weight / 1000).toLocaleString('en-us', {
@@ -169,7 +173,13 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
                       })}g `
                   : ''}
               </p>
-              <p>{item.count ? item.count.toLocaleString('en-us') + `x` : ''}</p>
+              <p
+                style={{
+                  fontSize: '10px',
+                }}
+              >
+                {item.count ? item.count.toLocaleString('en-us') + `x` : ''}
+              </p>
             </div>
           </div>
           <div>

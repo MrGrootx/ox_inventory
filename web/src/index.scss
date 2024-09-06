@@ -1,17 +1,17 @@
-$mainColor: #22232c;
-$textColor: #c1c2c5;
+$mainColor: #169299bd;
+$textColor: #ffffff;
 $mainFont: Roboto;
 
-$secondaryColor: rgba(12, 12, 12, 0.4);
-$secondaryColorHighlight: #33343F;
+$secondaryColor: rgba(28, 28, 28, 0.644);
+$secondaryColorHighlight: #169299bd;
 $secondaryColorLight: rgba(0, 0, 0, 0.5);
 $secondaryColorDark: rgba(12, 12, 12, 0.8);
 
-$gridCols: 5;
-$gridRows: 5;
-$gridSize: 10.2vh;
-$gridGap: 2px;
-$containerSize: calc(#{$gridRows} * #{$gridSize + 0.22vh} + #{$gridRows} * #{$gridGap});
+$gridCols: 8;
+$gridRows: 6;
+$gridSize: 9.2vh;
+$gridGap: 3px;
+$containerSize: calc(#{$gridRows} * #{$gridSize + 0.50vh} + #{$gridRows} * #{$gridGap});
 
 body {
   margin: 0;
@@ -102,7 +102,7 @@ button:active {
 }
 
 .item-drag-preview {
-  width: 7.7vh;
+  width: 10.7vh;
   height: 7.7vh;
   z-index: 1;
   position: fixed;
@@ -266,6 +266,7 @@ button:active {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 5px;
   p {
     font-size: 16px;
   }
@@ -279,13 +280,23 @@ button:active {
   gap: $gridGap;
   overflow-y: scroll;
 }
+//EDITED
+.inventory-grid-container2 {
+  display: grid;
+  height: $containerSize;
+  grid-template-columns: repeat(5,$gridSize);
+  grid-auto-rows: $gridSize + 0.22vh;
+  gap: $gridGap;
+  overflow-y: scroll;
+}
+
 
 // inventory slots
 .inventory-slot {
   background-color: $secondaryColor;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 2.5%;
+  border-radius: 8.5%;
   image-rendering: -webkit-optimize-contrast;
   position: relative;
   background-size: 7vh;
@@ -318,14 +329,15 @@ button:active {
 }
 
 .inventory-slot-number {
-  background-color: white;
-  color: black;
+  background-color: #1AB754;
+  color: white;
   height: 12px;
-  border-top-left-radius: 0.25vh;
+  border-top-left-radius: 0.60vh;
   border-bottom-right-radius: 0.25vh;
   padding: 3px;
   font-size: 12px;
   font-family: $mainFont;
+  
 }
 
 .item-slot-wrapper {

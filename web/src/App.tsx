@@ -62,7 +62,7 @@ debugData([
       rightInventory: {
         id: 'shop',
         type: 'crafting',
-        slots: 5000,
+        slots: 10,
         label: 'Bob Smith',
         weight: 3000,
         maxWeight: 5000,

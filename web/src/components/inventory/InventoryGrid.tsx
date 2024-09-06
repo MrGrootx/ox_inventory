@@ -37,7 +37,7 @@ const InventoryGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
           </div>
           <WeightBar percent={inventory.maxWeight ? (weight / inventory.maxWeight) * 100 : 0} />
         </div>
-        <div className="inventory-grid-container" ref={containerRef}>
+        <div className={`${inventory.type === 'player' ? 'inventory-grid-container' : 'inventory-grid-container2'}`} ref={containerRef}>
           <>
             {inventory.items.slice(0, (page + 1) * PAGE_SIZE).map((item, index) => (
               <InventorySlot
@@ -48,6 +48,7 @@ const InventoryGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
                 inventoryGroups={inventory.groups}
                 inventoryId={inventory.id}
               />
+              
             ))}
           </>
         </div>
