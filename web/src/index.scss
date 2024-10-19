@@ -19,7 +19,7 @@ $secondaryColorDark: rgba(12, 12, 12, 0.8);
 
 $gridCols: 5;
 $gridRows: 6;
-$gridSize: 9.2vh;
+$gridSize: 9.5vh;
 $gridGap: 3px;
 $containerSize: calc(#{$gridRows} * #{$gridSize + 0.5vh} + #{$gridRows} * #{$gridGap});
 
@@ -475,20 +475,27 @@ button:active {
 
 // hotbar
 .hotbar-container {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, $gridSize);
+  grid-template-rows: repeat(3, $gridSize);
   gap: 2px;
-  justify-content: start;
   width: 100%;
+  justify-content: center;
+  height: 100%;
   position: absolute;
   bottom: 2vh;
+  
 }
 
+
+
 .hotbar-item-slot {
+  
   @extend .inventory-slot;
   width: $gridSize;
   height: $gridSize;
   margin-top: 9px;
+  
 }
 
 .hotbar-slot-header-wrapper {
@@ -567,19 +574,19 @@ button:active {
 }
 
 .transition-slide-up-enter {
-  transform: translateY(200px);
+  transform: translateX(200px);
 }
 
 .transition-slide-up-enter-active {
-  transform: translateY(0px);
+  transform: translateX(0px);
   transition: all 200ms;
 }
 
 .transition-slide-up-exit {
-  transform: translateY(0px);
+  transform: translateX(0px);
 }
 
 .transition-slide-up-exit-active {
-  transform: translateY(200px);
+  transform: translateX(200px);
   transition: all 200ms;
 }

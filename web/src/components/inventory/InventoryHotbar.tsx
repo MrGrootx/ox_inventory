@@ -28,7 +28,7 @@ const InventoryHotbar: React.FC = () => {
   return (
     <SlideUp in={hotbarVisible}>
       {/* justgroot - hotbar-container */}
-      <div className="">
+      <div>
         {items.map((item) => (
           <div
             className="hotbar-item-slot"
