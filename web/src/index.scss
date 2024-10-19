@@ -1,17 +1,27 @@
-$mainColor: #169299bd;
-$textColor: #ffffff;
-$mainFont: Roboto;
+// $mainColor: #169299bd;
+// $textColor: #ffffff;
+// $mainFont: Roboto;
 
-$secondaryColor: rgba(28, 28, 28, 0.644);
-$secondaryColorHighlight: #169299bd;
+// $secondaryColor: rgba(28, 28, 28, 0.644);
+// $secondaryColorHighlight: #169299bd;
+// $secondaryColorLight: rgba(0, 0, 0, 0.5);
+// $secondaryColorDark: rgba(12, 12, 12, 0.8);
+
+$mainColor: #22232c;
+$bgColor: rgba(27, 28, 44, 0.96);
+$textColor: #ffffff;
+$mainFont: 'Roboto';
+
+$secondaryColor: rgb(36, 37, 43);
+$secondaryColorHighlight: #01b888;
 $secondaryColorLight: rgba(0, 0, 0, 0.5);
 $secondaryColorDark: rgba(12, 12, 12, 0.8);
 
-$gridCols: 8;
+$gridCols: 5;
 $gridRows: 6;
 $gridSize: 9.2vh;
 $gridGap: 3px;
-$containerSize: calc(#{$gridRows} * #{$gridSize + 0.50vh} + #{$gridRows} * #{$gridGap});
+$containerSize: calc(#{$gridRows} * #{$gridSize + 0.5vh} + #{$gridRows} * #{$gridGap});
 
 body {
   margin: 0;
@@ -70,7 +80,7 @@ input[type='number']::-webkit-outer-spin-button {
   flex-direction: column;
 }
 
-.context-menu-item  {
+.context-menu-item {
   padding: 8px;
   border-radius: 4px;
   background-color: transparent;
@@ -255,7 +265,6 @@ button:active {
 
 // Dialog is used fro useful controls window
 
-
 // inventory grids
 .inventory-grid-wrapper {
   display: flex;
@@ -263,12 +272,23 @@ button:active {
   gap: calc($gridGap * 2);
 }
 .inventory-grid-header-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 5px;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 30%;
   p {
-    font-size: 16px;
+    font-size: 12px;
+    font-weight: 200;
+  }
+  .player-name {
+    font-size: 22px;
+    font-weight: 400;
+    color: #00ffbc;
+    width: max-content;
   }
 }
 
@@ -284,26 +304,25 @@ button:active {
 .inventory-grid-container2 {
   display: grid;
   height: $containerSize;
-  grid-template-columns: repeat(5,$gridSize);
+  grid-template-columns: repeat(5, $gridSize);
   grid-auto-rows: $gridSize + 0.22vh;
   gap: $gridGap;
   overflow-y: scroll;
 }
-
 
 // inventory slots
 .inventory-slot {
   background-color: $secondaryColor;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 8.5%;
+  border-radius: 5.5%;
   image-rendering: -webkit-optimize-contrast;
   position: relative;
   background-size: 7vh;
   color: $textColor;
-  border-color: rgba(0, 0, 0, 0.2);
-  border-style: inset;
-  border-width: 1px;
+  -webkit-box-shadow: inset 0px 0px 30px 3px rgba(16, 16, 18, 0.1);
+  -moz-box-shadow: inset 0px 0px 30px 3px rgba(16, 16, 18, 0.1);
+  box-shadow: inset 0px 0px 40px 10px rgba(16, 16, 18, 0.8);
 }
 
 .inventory-slot-label-box {
@@ -329,15 +348,14 @@ button:active {
 }
 
 .inventory-slot-number {
-  background-color: #1AB754;
+  background-color: #1b9f4b;
   color: white;
   height: 12px;
-  border-top-left-radius: 0.60vh;
+  border-top-left-radius: 0.6vh;
   border-bottom-right-radius: 0.25vh;
   padding: 3px;
   font-size: 12px;
   font-family: $mainFont;
-  
 }
 
 .item-slot-wrapper {
@@ -345,6 +363,7 @@ button:active {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  gap: 10px;
   p {
     font-size: 12px;
   }
@@ -394,7 +413,6 @@ button:active {
     text-shadow: 0.1vh 0.1vh 0 rgba(0, 0, 0, 0.7);
   }
 }
-
 
 .tooltip-wrapper {
   pointer-events: none;
@@ -460,7 +478,7 @@ button:active {
   display: flex;
   align-items: center;
   gap: 2px;
-  justify-content: center;
+  justify-content: start;
   width: 100%;
   position: absolute;
   bottom: 2vh;
@@ -470,6 +488,7 @@ button:active {
   @extend .inventory-slot;
   width: $gridSize;
   height: $gridSize;
+  margin-top: 9px;
 }
 
 .hotbar-slot-header-wrapper {
@@ -548,7 +567,7 @@ button:active {
 }
 
 .transition-slide-up-enter {
-  transform: translateY(200px)
+  transform: translateY(200px);
 }
 
 .transition-slide-up-enter-active {

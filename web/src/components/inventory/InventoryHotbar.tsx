@@ -9,7 +9,8 @@ import { SlotWithItem } from '../../typings';
 import SlideUp from '../utils/transitions/SlideUp';
 
 const InventoryHotbar: React.FC = () => {
-  const [hotbarVisible, setHotbarVisible] = useState(false);
+  // justgroot defalut hotbarVisible  useState was false
+  const [hotbarVisible, setHotbarVisible] = useState(true);
   const items = useAppSelector(selectLeftInventory).items.slice(0, 5);
 
   //stupid fix for timeout
@@ -26,7 +27,8 @@ const InventoryHotbar: React.FC = () => {
 
   return (
     <SlideUp in={hotbarVisible}>
-      <div className="hotbar-container">
+      {/* justgroot - hotbar-container */}
+      <div className="">
         {items.map((item) => (
           <div
             className="hotbar-item-slot"
