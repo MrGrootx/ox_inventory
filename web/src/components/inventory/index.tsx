@@ -49,9 +49,9 @@ const Inventory: React.FC = () => {
           <RightInventory />
           <Tooltip />
           <InventoryContext />
-     
         </div>
       </Fade>
+      <InventoryHotbar />
     </>
   );
 };

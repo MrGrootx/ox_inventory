@@ -28,30 +28,32 @@ const InventoryGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
     <>
       <div className="inventory-grid-wrapper" style={{ pointerEvents: isBusy ? 'none' : 'auto' }}>
         <div>
-          <div className="inventory-grid-header-wrapper">
-            <div
-              style={{
-                backgroundColor: `radial-gradient(circle, rgba(52,58,68,1) 0%, rgba(62,72,85,1) 38%, rgba(65,73,85,0.88) 80%)`,
-                padding: '5px 10px',
-                borderRadius: '3px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '5px',
-              }}
-            >
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div className="inventory-grid-header-wrapper">
               <div
                 style={{
-                  backgroundColor: '#169399',
-                  padding: '3px 5px',
+                  backgroundColor: `radial-gradient(circle, rgba(52,58,68,1) 0%, rgba(62,72,85,1) 38%, rgba(65,73,85,0.88) 80%)`,
+                  padding: '5px 10px',
                   borderRadius: '3px',
                   display: 'flex',
-                  justifyContent: 'center',
                   alignItems: 'center',
+                  gap: '5px',
                 }}
               >
-                <User />
+                <div
+                  style={{
+                    backgroundColor: '#169399',
+                    padding: '3px 5px',
+                    borderRadius: '3px',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                >
+                  <User />
+                </div>
+                <p>{inventory.label}</p>
               </div>
-              <p>{inventory.label}</p>
             </div>
             {inventory.maxWeight && (
               <p>

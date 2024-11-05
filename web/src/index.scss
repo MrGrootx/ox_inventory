@@ -272,6 +272,7 @@ button:active {
   gap: calc($gridGap * 2);
 }
 .inventory-grid-header-wrapper {
+  display: flex;
   justify-content: center;
   align-items: center;
   display: grid;
@@ -290,6 +291,7 @@ button:active {
     color: #00ffbc;
     width: max-content;
   }
+  width: 100%;
 }
 
 .inventory-grid-container {
@@ -475,27 +477,22 @@ button:active {
 
 // hotbar
 .hotbar-container {
-  display: grid;
-  grid-template-columns: repeat(2, $gridSize);
-  grid-template-rows: repeat(3, $gridSize);
+  display: flex;
   gap: 2px;
   width: 100%;
   justify-content: center;
+  align-items: end;
   height: 100%;
   position: absolute;
   bottom: 2vh;
-  
+  padding: 5px;
 }
 
-
-
 .hotbar-item-slot {
-  
   @extend .inventory-slot;
   width: $gridSize;
   height: $gridSize;
   margin-top: 9px;
-  
 }
 
 .hotbar-slot-header-wrapper {
@@ -574,19 +571,19 @@ button:active {
 }
 
 .transition-slide-up-enter {
-  transform: translateX(200px);
+  transform: translateY(200px);
 }
 
 .transition-slide-up-enter-active {
-  transform: translateX(0px);
+  transform: translateY(0px);
   transition: all 200ms;
 }
 
 .transition-slide-up-exit {
-  transform: translateX(0px);
+  transform: translateY(0px);
 }
 
 .transition-slide-up-exit-active {
-  transform: translateX(200px);
+  transform: translateY(200px);
   transition: all 200ms;
 }

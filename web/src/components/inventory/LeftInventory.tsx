@@ -8,7 +8,7 @@ const LeftInventory: React.FC = () => {
 
   return (
     <>
-      <InventoryHotbar />
+      {/* <InventoryHotbar /> */}
       <InventoryGrid inventory={leftInventory} />
     </>
   );
